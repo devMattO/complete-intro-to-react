@@ -9,7 +9,23 @@
 <body>
     <script src="node_modules/react/dist/react.js"></script>
     <script src="node_modules/react-dom/dist/react-dom.js"></script>
-    <div id="app"><%= body %></div>
+    <div id="app"></div>
+    <script>
+      var div = React.DOM.div
+      var h1 = React.DOM.h1
+
+      var MyFirstComponent = (
+        div(null,
+          h1(null,'this is my first component!')
+        )
+      )
+      ReactDOM.render(MyFirstComponent, document.getElementById('app'))
+
+    </script>
+
+
+
+
     <script src="/public/bundle.js"></script>
 </body>
 </html>
